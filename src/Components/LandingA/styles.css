@@ -1,0 +1,99 @@
+.cont-landing-A{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+.cont-carruselLanding{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/* código para el degrade */
+.cont-carruselLanding::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    pointer-events: none; /* Permite hacer clic a través del pseudo-elemento */
+}
+.cont-textosLanding{
+    position: absolute;
+    width: 55%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+.cont-textoLanding-h1{
+    width: 90%;
+    margin-top: 60px;
+}
+.cont-textoLanding-p{
+    width: 60%;
+    margin-top: 50px;
+}
+.tituloLanding{
+    color: white;
+    font-size: 2em;
+    font-weight: 500;
+    text-align: start;
+}
+.textoLanding-p{
+    color: white;
+    font-size: 1.3em;
+    font-weight: 300;
+    text-align: start;
+    margin-top: 20px;
+}
+.texto-inf-landing{
+    color: white;
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: start;
+}
+/* estilos flecha que señala hacia abajo compuesta por dos palitos blancos con movimiento hacia arriba y abjo */
+.cont-flecha {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.flecha {
+    display: flex;
+    align-items: center;
+    animation: bounce 2s infinite;
+}
+.linea {
+    width: 2px;
+    height: 20px;
+    margin-left: 12px;
+    background-color: white;
+}
+
+.linea1 {
+    transform: rotate(-50deg);
+}
+
+.linea2 {
+    transform: rotate(50deg);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

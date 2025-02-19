@@ -4,8 +4,11 @@
     align-items: center;
     list-style: none;
     color: white;
-    background-color: rgb(56, 56, 56);
     border: none;
+    background-image: url('../../Images/Textura-04.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-color: rgb(56, 56, 56); */
     z-index: 1;
 }
 .opc-select-language{   

@@ -3,5 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #333;
+    background-image: url('../../Images/Textura-04.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-color: #333; */
 }

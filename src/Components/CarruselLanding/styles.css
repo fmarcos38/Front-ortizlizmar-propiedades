@@ -1,0 +1,7 @@
+.imgCarruselLanding {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}
+

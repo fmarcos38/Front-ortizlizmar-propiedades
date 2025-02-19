@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(56, 56, 56);
+    /* background-color: rgb(56, 56, 56); */
 }
 .sub-cont-navbarInf{
     width: 90%;
@@ -27,8 +27,13 @@
 .logo-navbarInf{
     position: relative;
     width: 90%;
-    height: 75px;
+    height: 73px;
     top: -10px;
+}
+.logo-navbarInf:hover{
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(50, 50, 50);
 }
 /* col-2 */
 .col-2-navbarInf{

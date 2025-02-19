@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(56, 56, 56);
+    /* background-color: rgb(56, 56, 56); */
 }
 .sub-cont-navbarSup{
     width: 90%;
