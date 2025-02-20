@@ -8,15 +8,21 @@
 }
 .sub-cont-navbarInf{
     width: 90%;
+    height: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 /* col-1 */
 .col-1-navbarInf{
-    width: 25%;
+    display: none;
+}
+/* col-2-logo-navbarInf */
+.col-2-logo-navbarInf{
+    width: 20%;
+    height: 50px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
 }
 .navlink-navbarInf{
@@ -29,7 +35,7 @@
     position: relative;
     width: 90%;
     height: 73px;
-    top: -10px;
+    top: 0px;
 }
 .logo-navbarInf:hover{
     cursor: pointer;
@@ -39,7 +45,7 @@
 /* col-2 */
 .col-2-navbarInf{
     width: 60%;
-    height: 78px;
+    height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -57,16 +63,13 @@
 }
 /* col-3 */
 .col-3-navbarInf{
-    width: 15%;
-    height: 78px;
+    width: 5%;
+    height: 50px;
     display: flex;
     justify-content: end;
     align-items: center;
 }
-/* cont menú hamburg */
-.cont-menuHamburguesa-navbarInf{
-    display: none;
-}
+
 
 
 /* responsive */
@@ -77,84 +80,60 @@
         height: 75px;
         top: -10px;
     }
-    .ul-navbarInf > li{
-        font-size: 15px;
-    }
-    /* col-3 */
-    .col-3-navbarInf{
-        width: 5%;
-    }
-}
-@media screen and (max-width: 1060px) {
-    .col-1-navbarInf{
-        width: 22%;
-        justify-content: center;
+    /* col-2-logo-navbarInf */
+    .col-2-logo-navbarInf{
+        width: 20%;
     }
     .logo-navbarInf{
         position: relative;
-        width: 100%;
-        height: 60px;
+        width: 90%;
+        height: 53px;
         top: -10px;
     }
+    /* col-2 */
     .col-2-navbarInf{
-        width: 73%;
+        width: 60%;
+        justify-content: start;
     }
     .ul-navbarInf > li{
         font-size: 13px;
     }
-    /* col-3 */
-    .col-3-navbarInf{
-        width: 5%;
-    }
 }
-@media screen and (max-width: 830px) {
-    .sub-cont-navbarInf{
-        width: 90%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-    }
+@media screen and (max-width: 890px) {
+    /* col-1 */
     .col-1-navbarInf{
-        width: 90%;
-        justify-content: start;
-    }
-    .cont-menuHamburguesa-navbarInf{
-        width: 15%;
+        width: 5%;
+        height: 50px;
         display: flex;
         justify-content: start;
         align-items: center;
     }
-    .cont-logo-navbarInf{
+    /* col-2-logo-navbarInf */
+    .col-2-logo-navbarInf{
         width: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .logo-navbarInf{
-        width: 40%;
         position: relative;
-        height: 60px;
-        top: -10px;
+        width: 40%;
+        height: 63px;
     }
-    /* col 2 */
+    /* col-2 */
     .col-2-navbarInf{
         display: none;
     }
-    /* col-3 */
-    .col-3-navbarInf{
-        width: 10%;
-    }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
     .logo-navbarInf{
-        height: auto;
-        width: 60%;
+        position: relative;
+        width: 50%;
+        height: 55px;
     }
 }
 @media screen and (max-width: 450px) {
     .logo-navbarInf{
-        height: 45px;
-        top: 0;
-        margin: 0;
+        position: relative;
+        width: 60%;
+        height: 50px;
+        margin-top: 15px;
     }
 }

@@ -63,7 +63,6 @@
 .cont-tarjeta-4.animada {
     animation: slideInFromRight 1s forwards;
 }
-
 /* Definición de animaciones */
 @keyframes slideInFromLeft {
     from {
@@ -75,7 +74,6 @@
         opacity: 1;
     }
 }
-
 @keyframes slideInFromTop {
     from {
         transform: translateY(-100%);
@@ -86,7 +84,6 @@
         opacity: 1;
     }
 }
-
 @keyframes slideInFromBottom {
     from {
         transform: translateY(100%);
@@ -97,7 +94,6 @@
         opacity: 1;
     }
 }
-
 @keyframes slideInFromRight {
     from {
         transform: translateX(100%);
@@ -111,6 +107,9 @@
 
 /* responsive */
 @media (max-width: 1000px) {
+    .titulo-tarjetas {
+        top: -37px;
+    }
     .cont-tarjetas {
         width: 100%;
         display: flex;

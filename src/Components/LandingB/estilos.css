@@ -110,13 +110,3 @@
         font-size: 18px;
     }
 }
-@media screen and (max-width: 500px){
-    .logo-landing-B {
-        height: 17rem;
-        border-radius: 10px;
-    }
-    .texto-inf-landingB {
-        font-size: 18px;
-        padding: 5px 10px;
-    }
-}
