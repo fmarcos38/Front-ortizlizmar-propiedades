@@ -9,7 +9,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 /* código para el degrade */
 .cont-carruselLanding::before {
@@ -110,18 +109,18 @@
 }
 @media screen and (max-width: 500px) {
     .cont-landing-A{
-        height: 750px;
+        height: 700px;
     }
     .cont-carruselLanding{
-        height: 750px;
+        height: 700px;
     }
     /* código para el degrade */
     .cont-carruselLanding::before {
-        height: 750px;
+        height: 700px;
     }
     .cont-textosLanding{
-        width: 65%;
-        top: 60px;
+        width: 75%;
+        top: 80px;
         left: 0;
     }
     .tituloLanding{
