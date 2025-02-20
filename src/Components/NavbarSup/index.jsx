@@ -1,9 +1,10 @@
-import React from 'react';
+import React from 'react'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import './styles.css';
 
 function NavbarSup() {
+
     return (
         <div className='cont-navbarSup'>
             <div className='sub-cont-navbarSup'>

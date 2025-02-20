@@ -1,6 +1,7 @@
 import React from 'react'
 import LandingA from '../../Components/LandingA'
 import LandingB from '../../Components/LandingB'
+import LandingC from '../../Components/LandingC'
 import './styles.css'
 
 function Home() {
@@ -8,6 +9,7 @@ function Home() {
         <div className='cont-home page'>
             <LandingA />
             <LandingB />
+            <LandingC />
         </div>
     )
 }
