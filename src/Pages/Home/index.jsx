@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import LandingA from '../../Components/LandingA';
 import LandingB from '../../Components/LandingB';
 import LandingC from '../../Components/LandingC';

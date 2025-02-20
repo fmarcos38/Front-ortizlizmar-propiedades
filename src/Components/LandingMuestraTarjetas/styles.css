@@ -109,15 +109,38 @@
     }
 }
 
-/* Hacemos que sea responsive en pantallas más pequeñas */
-@media (max-width: 768px) {
+/* responsive */
+@media (max-width: 1000px) {
     .cont-tarjetas {
-        flex-direction: column;
-        gap: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: auto; /* Permite el desplazamiento horizontal */
+        scroll-snap-type: x mandatory; /* Hace que las tarjetas encajen al deslizar */
+        padding: 20px; /* Espaciado para evitar cortes */
+        gap: 10px; /* Espaciado entre tarjetas */
+    }
+
+    .cont-tarjeta-1, 
+    .cont-tarjeta-2, 
+    .cont-tarjeta-3, 
+    .cont-tarjeta-4 {
+        flex: 0 0 20%; /* Cada tarjeta ocupa el 80% del ancho */
+        scroll-snap-align: center; /* Hace que cada tarjeta se alinee al centro */
+        opacity: 1; /* Para que las tarjetas sean visibles sin necesidad de animaciones */
+    }
+
+    /* Ocultamos la barra de scroll en algunos navegadores */
+    .cont-tarjetas::-webkit-scrollbar {
+        display: none;
     }
 
     .titulo-tarjetas {
         font-size: 24px;
         width: 80%;
+        text-align: center;
     }
 }
+

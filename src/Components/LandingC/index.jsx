@@ -16,7 +16,7 @@ function LandingC() {
             </div>
             <div className='cont-fila-2'>
                 <div className='col-1'>
-                    <GroupIcon sx={{'fontSize':'60px'}}/>
+                    <GroupIcon sx={{'fontSize':'60px'}} className='iconos'/>
                     <p className='texto-fila-2'>Asesoría personalizada en Bienes Raíces</p>
                 </div>
                 <div className='col-2'>

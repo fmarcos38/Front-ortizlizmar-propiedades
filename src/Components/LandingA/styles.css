@@ -80,20 +80,31 @@
     margin-left: 12px;
     background-color: white;
 }
-
 .linea1 {
     transform: rotate(-50deg);
 }
-
 .linea2 {
     transform: rotate(50deg);
 }
-
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-10px);
+    }
+}
+
+/* responsive */
+@media screen and (max-width: 1000px) {
+    .cont-landing-A{
+        height: 600px;
+    }
+    .cont-carruselLanding{
+        height: 600px;
+    }
+    /* código para el degrade */
+    .cont-carruselLanding::before {
+        height: 600px;
     }
 }

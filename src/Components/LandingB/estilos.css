@@ -87,8 +87,29 @@
     }
 }
 
-
 /* responsive */
+@media screen and (max-width: 1000px) {
+    .cont-landing-b{
+        height: 600px;
+    }
+    .logo-landing-B{
+        height: 4.5rem;
+    }
+    .cont-titulo-landing-b{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+    .texto-somos{
+        color: white;
+        font-size: 18px;
+    }
+    .texto-p-landing-b{
+        font-size: 18px;
+    }
+}
 @media screen and (max-width: 500px){
     .logo-landing-B {
         height: 17rem;
