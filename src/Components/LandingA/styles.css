@@ -109,6 +109,21 @@
     }
 }
 @media screen and (max-width: 500px) {
+    .cont-landing-A{
+        height: 750px;
+    }
+    .cont-carruselLanding{
+        height: 750px;
+    }
+    /* código para el degrade */
+    .cont-carruselLanding::before {
+        height: 750px;
+    }
+    .cont-textosLanding{
+        width: 65%;
+        top: 60px;
+        left: 0;
+    }
     .tituloLanding{
         font-size: 1.5em;
         font-weight: 500;

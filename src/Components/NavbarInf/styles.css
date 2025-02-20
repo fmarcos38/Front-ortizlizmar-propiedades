@@ -34,8 +34,8 @@
 .logo-navbarInf{
     position: relative;
     width: 90%;
-    height: 73px;
-    top: 0px;
+    height: 65px;
+    top: -10px;
 }
 .logo-navbarInf:hover{
     cursor: pointer;
@@ -131,7 +131,6 @@
 }
 @media screen and (max-width: 450px) {
     .logo-navbarInf{
-        position: relative;
         width: 60%;
         height: 50px;
         margin-top: 15px;

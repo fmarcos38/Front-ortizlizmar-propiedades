@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import NavbarSup from '../NavbarSup';
 import NavbarInf from '../NavbarInf';
-import './styles.css'
-
+import './styles.css';
 
 function Navbar() {
+    const [scrolled, setScrolled] = useState(false);
 
-    //efecto paraa el scroll
-    const[scrolled, setScrolled] = useState(false);
-
-    //efecto para el scroll
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 1400) {
-                setScrolled(true);
+            if (window.innerWidth > 500) { // Solo aplica el efecto en pantallas mayores a 500px
+                if (window.scrollY > 1400) {
+                    setScrolled(true);
+                } else {
+                    setScrolled(false);
+                }
             } else {
-                setScrolled(false);
+                setScrolled(false); // En pantallas menores a 500px, mantiene la navbar fija
             }
         };
 
@@ -30,7 +30,7 @@ function Navbar() {
             <NavbarSup />
             <NavbarInf />
         </nav>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;
