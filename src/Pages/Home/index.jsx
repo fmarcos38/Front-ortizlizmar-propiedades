@@ -64,7 +64,7 @@ function Home() {
                             />
                         </div>
                         <div className='cont-listaProps-home'>
-                        <ListaPropiedades allProps={allProps} id='listaProps' />
+                            <ListaPropiedades allProps={allProps} id='listaProps' />
                             {
                                 allProps.length > 0 && (
                                     <Paginacion
