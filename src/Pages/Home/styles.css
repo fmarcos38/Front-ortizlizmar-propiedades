@@ -28,14 +28,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
+    border-radius: 0 10px 10px 0;
+    background-image: url('../../Images/Textura-04.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .cont-listaProps-home{
     width: 80%;
-    height: auto;
+    min-height: 709px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     background-color: blueviolet;
+}
+
+/* responsive */
+@media screen and (max-width: 760px) {
+    .cont-filtros-props{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cont-filtros-home{
+        width: 90%;
+        border-radius: 10px;
+    }
 }

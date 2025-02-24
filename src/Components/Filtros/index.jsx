@@ -1,12 +1,13 @@
 import React from 'react'
 import FiltroVentaAlq from '../FiltroVentaAlq';
+import FiltroPrecio from '../FIltroRangoPrecio';
 import './styles.css';
 
-function Filtros({muestraVntaAlq}) {
+function Filtros({muestraVntaAlq, precioMin, precioMax, setPrecioMin, setPrecioMax, setCurrentPage}) {
 
     const arrayFiltros = [
-        'Departamento', 'Casa', 'PH', 'Local', 'Oficina', 
-        'Cochera', 'Terreno', 'Fondo de comercio', 'Galpón', 'Emprendimientos',
+        'Departamento', 'Casa', 'PH', 'Local', 
+        'Oficina', 'Cochera', 'Terreno', 'Galpón',
     ];
 
     return (
@@ -14,7 +15,7 @@ function Filtros({muestraVntaAlq}) {
             <div className='titulo-filtros'>
                 <h2>Personalizá tu búsqueda</h2>
             </div>
-
+            {/* filtro Vnt / Alq */}
             <div className='cont-venta-alq'>
                 <FiltroVentaAlq />
             </div>
@@ -29,6 +30,17 @@ function Filtros({muestraVntaAlq}) {
                     )
                 }
                 </div>
+            </div>
+
+            {/* filtro rango precio */}
+            <div className='cont-filtro-rangoPrecio'>
+                <FiltroPrecio 
+                    precioMin={precioMin} 
+                    precioMax={precioMax}
+                    setPrecioMin={setPrecioMin}
+                    setPrecioMax={setPrecioMax}
+                    setCurrentPage={setCurrentPage}
+                />
             </div>
         </div>
     )

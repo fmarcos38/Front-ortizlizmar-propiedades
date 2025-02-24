@@ -27,8 +27,11 @@
 .price-range-values {
     font-size: 18px;
     font-weight: bold;
-    color: #040404;
+    color: white;
     margin-bottom: 10px;
+}
+.precio {
+    color: white;
 }
 .btn-filtros{
     width: auto;
@@ -37,6 +40,4 @@
     padding: 8px;
     cursor: pointer;
     border-radius: 10px;
-    color: var(--primary-color);
-    background-color: var(--color-negro-logo);
 }
