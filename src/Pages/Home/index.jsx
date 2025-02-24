@@ -49,7 +49,7 @@ function Home() {
                 <LandingMuestraTarjetas />
 
                 <div className='cont-titulo-filtros-listaProps'>
-                    <h1 className='titulo-busqueda'>Busqueda de propiedades</h1>
+                    <h1 className='titulo-busqueda'>Busqueda de propiedades personalizada</h1>
                     <div className='cont-filtros-props'>
                         <div className='cont-filtros-home'>
                             <Filtros
@@ -59,6 +59,8 @@ function Home() {
                                 setPrecioMin={setPrecioMin}
                                 setPrecioMax={setPrecioMax}
                                 setCurrentPage={setCurrentPage}
+                                setOperacion={setOperacion}
+                                setTipoPropiedad={setTipoPropiedad}
                             />
                         </div>
                         <div className='cont-listaProps-home'>

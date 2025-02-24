@@ -39,7 +39,7 @@ const FiltraPrecio = ({precioMin, precioMax, setPrecioMin, setPrecioMax, setCurr
                 />
             </div>
             <div className="price-range-values">
-                <span className='precio'>{precioMin?.toLocaleString()}</span> - <span className='precio'>{precioMax?.toLocaleString()}</span>
+                <span className='precio-filtro-rango'>{precioMin?.toLocaleString()} - {precioMax?.toLocaleString()}</span>
             </div>           
         </div>
     );

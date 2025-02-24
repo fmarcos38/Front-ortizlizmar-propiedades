@@ -1,6 +1,7 @@
 :root {
     --fondo-page: white;
     --fondo-navbar: rgb(56, 56, 56);
+    --color-fuente: white;
 }
 
 .page {

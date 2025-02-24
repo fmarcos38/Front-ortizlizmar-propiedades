@@ -41,7 +41,7 @@ function Card({ id, direccionF, cantCocheras, operacion, imagenes, tituloPublica
 
             {/* info 1 */}
             <div className='card-info1'>
-                <div className='cont-titulo-publicacion'>
+                <div className='cont-titulo-publicacion-card'>
                     <span className='tituloPublicacion'>{tituloPublicacion}</span>
                 </div>
                 <div className='cont-info1'>

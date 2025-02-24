@@ -1,14 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FiltroVentaAlq from '../FiltroVentaAlq';
 import FiltroPrecio from '../FIltroRangoPrecio';
 import './styles.css';
 
-function Filtros({muestraVntaAlq, precioMin, precioMax, setPrecioMin, setPrecioMax, setCurrentPage}) {
+function Filtros({muestraVntaAlq, setOperacion, setTipoPropiedad, precioMin, precioMax, setPrecioMin, setPrecioMax, setCurrentPage}) {
 
     const arrayFiltros = [
         'Departamento', 'Casa', 'PH', 'Local', 
         'Oficina', 'Cochera', 'Terreno', 'Galpón',
     ];
+    const [operacionLocal, setOperacioLocal] = useState(''); //estado para ver el tilde en los checkbox
+
+    // Asegurarse de que `setOperacion` en Home sea invocado cada vez que cambia el checkbox
+    const handleFilterChange = (event) => {
+        const { value } = event.target;
+        const nuevaOperacion = value === operacionLocal ? '' : value;
+        setOperacioLocal(nuevaOperacion);
+        setOperacion(nuevaOperacion);
+    };
+    // Actualizar `tipoPropiedad` en Home y `tipoP` en BarraLateral
+    const handleClick = (e) => {
+        const { id } = e.target;
+        setTipoPropiedad(id);
+    };
 
     return (
         <div className='cont-filtros'>
@@ -17,7 +31,7 @@ function Filtros({muestraVntaAlq, precioMin, precioMax, setPrecioMin, setPrecioM
             </div>
             {/* filtro Vnt / Alq */}
             <div className='cont-venta-alq'>
-                <FiltroVentaAlq />
+                <FiltroVentaAlq handleFilterChange={handleFilterChange}/>
             </div>
 
             <div className='cont-filtros'>
@@ -25,7 +39,14 @@ function Filtros({muestraVntaAlq, precioMin, precioMax, setPrecioMin, setPrecioM
                 <div className='cont-filtros-map'>
                 {
                     arrayFiltros.map((filtro, index) => (
-                            <button key={index} className='btn-filtro'>{filtro}</button>
+                            <button
+                                key={index}
+                                id='{filtro}'
+                                onClick={handleClick}
+                                className='btn-filtro'
+                            >
+                                {filtro}
+                            </button>
                         )
                     )
                 }

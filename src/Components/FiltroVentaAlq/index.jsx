@@ -5,7 +5,6 @@ function FiltroVentaAlq({setOperacion}) {
 
     const [operacionLocal, setOperacioLocal] = useState(''); //estado para ver el tilde en los checkbox
     
-
     // Asegurarse de que `setOperacion` en Home sea invocado cada vez que cambia el checkbox
     const handleOperacion = (event) => {
         const { value } = event.target;
