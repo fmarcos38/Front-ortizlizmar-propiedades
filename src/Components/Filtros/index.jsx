@@ -56,25 +56,27 @@ function Filtros({muestraVntaAlq, setOperacion, setTipoPropiedad, setAmbientes, 
 
             <div className='cont-amb'>
                 <p className='p-ambientes'>Ambientes: </p>
-                <div className='cont-ambiente-1'>
-                    <input type='checkbox' id='1' value={1} checked={ambientesLocal === '1'} onChange={handleAmbientes} className='check-amb'/>
-                    <label htmlFor='1' className='label-amb'>1</label>
-                </div>
-                <div className='cont-ambiente-2'>
-                    <input type='checkbox' id='2'  value={2} checked={ ambientesLocal === '2'} onChange={handleAmbientes} className='check-amb'/>
-                    <label htmlFor='2' className='label-amb'>2</label>
-                </div>
-                <div className='cont-ambiente-3'>
-                    <input type='checkbox' id='3' value={3} checked={ambientesLocal === '3'} onChange={handleAmbientes} className='check-amb'/>
-                    <label htmlFor='3' className='label-amb'>3</label>
-                </div>
-                <div className='cont-ambiente-4'>
-                    <input type='checkbox' id='4' value={4} checked={ambientesLocal === '4'} onChange={handleAmbientes} className='check-amb'/>
-                    <label htmlFor='4' className='label-amb'>4</label>
-                </div>
-                <div className='cont-ambiente-4'>
-                    <input type='checkbox' id='mas' value={'mas'} checked={ambientesLocal === 'mas'} onChange={handleAmbientes} className='check-amb'/>
-                    <label htmlFor='4' className='label-amb'>O más</label>
+                <div className='cont-ambientes'>
+                    <div className='cont-ambiente-1'>
+                        <input type='checkbox' id='1' value={1} checked={ambientesLocal === '1'} onChange={handleAmbientes} className='check-amb' />
+                        <label htmlFor='1' className='label-amb'>1</label>
+                    </div>
+                    <div className='cont-ambiente-2'>
+                        <input type='checkbox' id='2' value={2} checked={ambientesLocal === '2'} onChange={handleAmbientes} className='check-amb' />
+                        <label htmlFor='2' className='label-amb'>2</label>
+                    </div>
+                    <div className='cont-ambiente-3'>
+                        <input type='checkbox' id='3' value={3} checked={ambientesLocal === '3'} onChange={handleAmbientes} className='check-amb' />
+                        <label htmlFor='3' className='label-amb'>3</label>
+                    </div>
+                    <div className='cont-ambiente-4'>
+                        <input type='checkbox' id='4' value={4} checked={ambientesLocal === '4'} onChange={handleAmbientes} className='check-amb' />
+                        <label htmlFor='4' className='label-amb'>4</label>
+                    </div>
+                    <div className='cont-ambiente-4'>
+                        <input type='checkbox' id='mas' value={'mas'} checked={ambientesLocal === 'mas'} onChange={handleAmbientes} className='check-amb' />
+                        <label htmlFor='4' className='label-amb'>Más</label>
+                    </div>
                 </div>
             </div>
 

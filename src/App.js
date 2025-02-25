@@ -1,4 +1,5 @@
-import { InmobiliariaProvider } from './Context';
+import React from 'react';
+import InmobiliariaProvider  from './Context';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Navbar from './Components/Navbar';

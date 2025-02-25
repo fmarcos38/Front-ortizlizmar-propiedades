@@ -12,30 +12,27 @@ function NavbarInf() {
                 <div className='col-1-navbarInf'>
                     <MenuHamburguesa />
                 </div>
-                
                 <div className='col-2-logo-navbarInf'>
                     <NavLink to='/' className='navlink-navbarInf'>
                         <img src={Logo} alt='Logo' className='logo-navbarInf' />
                     </NavLink>
                 </div>
-                
                 <div className='col-2-navbarInf'>
                     <ul className='ul-navbarInf'>
-                        <li>Ventas</li>
-                        <li>Alquileres</li>
-                        <li>Emprendimientos</li>
-                        <li>Internacional</li>
-                        <li>Nosotros</li>
-                        <li>Contacto</li>
+                        <li data-translate>Ventas</li>
+                        <li data-translate>Alquileres</li>
+                        <li data-translate>Emprendimientos</li>
+                        <li data-translate>Internacional</li>
+                        <li data-translate>Nosotros</li>
+                        <li data-translate>Contacto</li>
                     </ul>
                 </div>
-                
                 <div className='col-3-navbarInf'>
                     <LanguageSelector />
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default NavbarInf
+export default NavbarInf;
