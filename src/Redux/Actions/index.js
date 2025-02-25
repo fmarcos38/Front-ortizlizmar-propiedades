@@ -7,7 +7,7 @@ import { actual } from "../../url";
 
 //--actions para props
 //trae props
-export const getProps = (limit, offset, operacion, tipoPropiedad, precioMin, precioMax) => {
+export const getProps = (limit, offset, operacion, tipoPropiedad, ambientes, precioMin, precioMax) => {
     return async function(dispatch) {
         dispatch({type: LOADING});
 
@@ -16,7 +16,8 @@ export const getProps = (limit, offset, operacion, tipoPropiedad, precioMin, pre
             let queryParams = `?limit=${limit}&offset=${offset}`;
 
             if(operacion) queryParams += `&operacion=${operacion}`;
-            if(tipoPropiedad) queryParams += `&tipoPropiedad=${tipoPropiedad}`;
+            if(tipoPropiedad) queryParams += `&tipo=${tipoPropiedad}`;
+            if(ambientes) queryParams += `&ambientes=${ambientes}`;
             if(precioMin) queryParams += `&precioMin=${precioMin}`;
             if(precioMax) queryParams += `&precioMax=${precioMax}`;
 

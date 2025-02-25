@@ -1,22 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import FiltroVentaAlq from '../FiltroVentaAlq';
 import FiltroPrecio from '../FIltroRangoPrecio';
 import './styles.css';
 
-function Filtros({muestraVntaAlq, setOperacion, setTipoPropiedad, precioMin, precioMax, setPrecioMin, setPrecioMax, setCurrentPage}) {
+function Filtros({muestraVntaAlq, setOperacion, setTipoPropiedad, setAmbientes, precioMin, precioMax, setPrecioMin, setPrecioMax, setCurrentPage}) {
 
     const arrayFiltros = [
-        'Departamento', 'Casa', 'PH', 'Local', 
+        'Depto', 'Casa', 'PH', 'Local', 
         'Oficina', 'Cochera', 'Terreno', 'Galpón',
     ];
-    const [operacionLocal, setOperacioLocal] = useState(''); //estado para ver el tilde en los checkbox
+    const [ambientesLocal, setAmbientesLocal] = React.useState('0'); //estado para ver el tilde en los checkbox
 
-    // Asegurarse de que `setOperacion` en Home sea invocado cada vez que cambia el checkbox
-    const handleFilterChange = (event) => {
+    // Actualizar `ambientes` en Home y `ambientesLocal` en BarraLateral
+    const handleAmbientes = (event) => {
         const { value } = event.target;
-        const nuevaOperacion = value === operacionLocal ? '' : value;
-        setOperacioLocal(nuevaOperacion);
-        setOperacion(nuevaOperacion);
+        const nuevosAmbientes = value === ambientesLocal ? 0 : value;
+        setAmbientesLocal(nuevosAmbientes);
+        setAmbientes(nuevosAmbientes
+        );
     };
     // Actualizar `tipoPropiedad` en Home y `tipoP` en BarraLateral
     const handleClick = (e) => {
@@ -31,7 +32,7 @@ function Filtros({muestraVntaAlq, setOperacion, setTipoPropiedad, precioMin, pre
             </div>
             {/* filtro Vnt / Alq */}
             <div className='cont-venta-alq'>
-                <FiltroVentaAlq handleFilterChange={handleFilterChange}/>
+                <FiltroVentaAlq setOperacion={setOperacion}/>
             </div>
 
             <div className='cont-filtros'>
@@ -41,7 +42,7 @@ function Filtros({muestraVntaAlq, setOperacion, setTipoPropiedad, precioMin, pre
                     arrayFiltros.map((filtro, index) => (
                             <button
                                 key={index}
-                                id='{filtro}'
+                                id={filtro}
                                 onClick={handleClick}
                                 className='btn-filtro'
                             >
@@ -50,6 +51,30 @@ function Filtros({muestraVntaAlq, setOperacion, setTipoPropiedad, precioMin, pre
                         )
                     )
                 }
+                </div>
+            </div>
+
+            <div className='cont-amb'>
+                <p className='p-ambientes'>Ambientes: </p>
+                <div className='cont-ambiente-1'>
+                    <input type='checkbox' id='1' value={1} checked={ambientesLocal === '1'} onChange={handleAmbientes} className='check-amb'/>
+                    <label htmlFor='1' className='label-amb'>1</label>
+                </div>
+                <div className='cont-ambiente-2'>
+                    <input type='checkbox' id='2'  value={2} checked={ ambientesLocal === '2'} onChange={handleAmbientes} className='check-amb'/>
+                    <label htmlFor='2' className='label-amb'>2</label>
+                </div>
+                <div className='cont-ambiente-3'>
+                    <input type='checkbox' id='3' value={3} checked={ambientesLocal === '3'} onChange={handleAmbientes} className='check-amb'/>
+                    <label htmlFor='3' className='label-amb'>3</label>
+                </div>
+                <div className='cont-ambiente-4'>
+                    <input type='checkbox' id='4' value={4} checked={ambientesLocal === '4'} onChange={handleAmbientes} className='check-amb'/>
+                    <label htmlFor='4' className='label-amb'>4</label>
+                </div>
+                <div className='cont-ambiente-4'>
+                    <input type='checkbox' id='mas' value={'mas'} checked={ambientesLocal === 'mas'} onChange={handleAmbientes} className='check-amb'/>
+                    <label htmlFor='4' className='label-amb'>O más</label>
                 </div>
             </div>
 

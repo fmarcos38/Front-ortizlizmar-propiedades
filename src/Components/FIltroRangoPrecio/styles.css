@@ -5,6 +5,12 @@
     border-radius: 8px;
     width: 100%;
 }
+.titulo-rango-precio{
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+}
 .price-range-slider {
     display: flex;
     justify-content: space-between;

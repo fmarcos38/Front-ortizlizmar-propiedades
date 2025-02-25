@@ -1,5 +1,5 @@
 .cont-filtros{
-    width: 80%;
+    width: 90%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -15,6 +15,7 @@
 }
 .titulo-filtros > h2 {
     font-size: 18px;
+    font-weight: 300;
     text-align: center;
     color: white;
 }
@@ -22,14 +23,15 @@
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 20px;
 }
 .cont-filtros > h3 {
     font-size: 18px;
     color: white;
+    font-weight: 300;
 }
 .btn-filtro {
     width: 170px;
@@ -37,7 +39,7 @@
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
-    margin: 5px 0;
+    margin: 5px;
     color: white;
     background: transparent;
     border: 2px solid white;
@@ -66,7 +68,35 @@
     color: black;
     z-index: 1;
 }
-
+.cont-amb{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.p-ambientes{
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+}
+.cont-ambiente-1,
+.cont-ambiente-2,
+.cont-ambiente-3,
+.cont-ambiente-4 {
+    width: 10%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label-amb{
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+    margin-left: 5px;
+}
 /* responsive */
 @media screen and (max-width: 950px) {
     .btn-filtro {

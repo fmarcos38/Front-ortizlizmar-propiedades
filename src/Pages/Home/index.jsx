@@ -19,7 +19,8 @@ function Home() {
     const totalPropiedades = useSelector(state => state.totPropiedades);
     //estados para las propiedades
     const [operacion, setOperacion] = useState('');
-    const [tipoPropiedad, setTipoPropiedad] = useState('todas');
+    const [tipoPropiedad, setTipoPropiedad] = useState('todas'); console.log("tipoP:", tipoPropiedad);
+    const [ambientes, setAmbientes] = useState('0'); //en el back lo convierto a int
     const [precioMin, setPrecioMin] = useState(10000);
     const [precioMax, setPrecioMax] = useState(1000000);
     //estados para paginación
@@ -35,8 +36,8 @@ function Home() {
     }, []);
 
     useEffect(() => {
-        dispatch(getProps(limit, offset, operacion, tipoPropiedad, precioMin, precioMax));
-    }, [dispatch, limit, offset, operacion, tipoPropiedad, precioMin, precioMax]);
+        dispatch(getProps(limit, offset, operacion, tipoPropiedad, ambientes, precioMin, precioMax));
+    }, [dispatch, limit, offset, operacion, tipoPropiedad, ambientes, precioMin, precioMax]);
 
     return (
         loading ? (
@@ -61,6 +62,7 @@ function Home() {
                                 setCurrentPage={setCurrentPage}
                                 setOperacion={setOperacion}
                                 setTipoPropiedad={setTipoPropiedad}
+                                setAmbientes={setAmbientes}
                             />
                         </div>
                         <div className='cont-listaProps-home'>
