@@ -17,7 +17,7 @@ function LandigA() {
                         Encontrá la propiedad que estás buscando, en el lugar que siempre soñaste.
                     </p>
                     <p className='texto-inf-landing'>
-                    Trabajamos propiedades EXCLISIVAS...
+                    Trabajamos propiedades exclusivas...
                 </p>
                 </div>
             </div>

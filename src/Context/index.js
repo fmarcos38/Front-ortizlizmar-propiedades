@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react';
 
 export const InmobiliariaContext = createContext();
 
-const API_KEY = ""; // Reemplázalo con tu API Key
+const API_KEY = "AIzaSyBRL5HhMoPtnSqZ5VjFR6rbpMu0ZsRLTxc"; // Reemplázalo con tu API Key
 
 const InmobiliariaProvider = ({ children }) => {
     const [idioma, setIdioma] = useState("es");
