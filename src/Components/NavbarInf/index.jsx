@@ -53,7 +53,7 @@ function NavbarInf({logout, userLog}) {
                             </NavLink>
                         </li>
                         {
-                            userLog?.isAdmin === false && (
+                            userLog?.isAdmin === "false" && (
                                 <li data-translate>
                                     <NavLink to='/favoritos' className={'navlink-navbarInf'}>
                                         Favoritos
@@ -72,7 +72,7 @@ function NavbarInf({logout, userLog}) {
                             </NavLink>
                         </li>
                         {
-                            userLog?.isAdmin && (
+                            userLog?.isAdmin === true && (
                                 <li
                                     className='navbar-item-admin'
                                     onMouseEnter={handleMouseEnterAdmin}
@@ -118,7 +118,7 @@ function NavbarInf({logout, userLog}) {
                 {/* login/logout */}
                 <div>
                     {
-                        userLog?.nombre ? (
+                        userLog?.isAdmin ? (
                             <button onClick={logout} className='btn-navbarInf'>
                                 <LogoutIcon sx={{color:'white', marginLeft:'5px'}}/>
                             </button>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { InmobiliariaContext } from '../../Context';
 import { logout } from '../../localStorage';
-import { resetLogin } from '../../Redux/Actions';
+import { resetLogin, getUsuario } from '../../Redux/Actions';
 import NavbarSup from '../NavbarSup';
 import NavbarInf from '../NavbarInf';
 import Swal from 'sweetalert2';
@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux';
 function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const context = useContext(InmobiliariaContext);
+    const userLog = context.userLog;
     const dispatch = useDispatch();
 
     //logout
@@ -54,12 +55,19 @@ function Navbar() {
         };
     }, []);
 
+    useEffect(() => {
+        if(userLog?.user?._id) {
+            dispatch(getUsuario(userLog?.user?._id));
+        }
+    }, [dispatch, userLog?.user?._id]);
+
+
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <NavbarSup />
             <NavbarInf 
                 logout={handleLogOut}
-                userLog={context.userLog}
+                userLog={userLog?.user}
             />
         </nav>
     );

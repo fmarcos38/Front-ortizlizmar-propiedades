@@ -1,12 +1,12 @@
 import React from 'react';
-import Login from '../../Components/Login';
-import './estilos.css';
+import LoginClasico from '../../Components/LoginClasico';
+import './styles.css';
 
 function LoginPage() {
-    
+
     return (
-        <div className='page cont-login-page'>
-            <Login />
+        <div className='page cont-page-login'>
+            <LoginClasico />
         </div>
     )
 }

@@ -18,9 +18,8 @@ import EditaPropiedad from './Pages/EditaPropiedad';
 import AltaUsuarioPage from './Pages/AltaUsuario';
 import ListaUsuariosPage from './Pages/ListaUsuariosPage';
 import EditaUsuarioPage from './Pages/EditaUsuario';
-import './App.css';
 import Footbar from './Components/Footbar';
-
+import './App.css';
 
 function App() {
 

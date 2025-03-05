@@ -7,9 +7,9 @@ import { actual } from "../../url";
 
 //---usuarios-----------------------------------
 //---LOGIN--------------------------------------------------------
-export function login(data){ 
+export function login(data){  
     return async function (dispatch) {
-        const resp = await axios.post(`${actual}/auth/login`, data); 
+        const resp = await axios.post(`${actual}/auth/login`, data);
         //asigno data del user al localStorage
         localStorage.setItem("userData", JSON.stringify(resp.data));
         dispatch({ type: LOGIN, payload: resp.data });        

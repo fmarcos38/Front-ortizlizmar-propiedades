@@ -1,12 +1,33 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
+import { userData } from '../localStorage';
 
 export const InmobiliariaContext = createContext();
 
-const API_KEY = "AIzaSyBRL5HhMoPtnSqZ5VjFR6rbpMu0ZsRLTxc"; // Reemplázalo con tu API Key
+const API_KEY = process.env.REACT_APP_GOOGLE_TRASLATION; // Reemplázalo con tu API Key
 
 const InmobiliariaProvider = ({ children }) => {
     const [idioma, setIdioma] = useState("es");
+    //estado data usuario logeado, por eso null es un objeto
+    const [userLog, setUserLog] = useState(null);
+    //estado para login
+    const [isAuthenticated, setIsAuthenticated] = useState(false); 
+    //estado nombre admin logeado
+    const [nombreUser, setNombreUser] = useState('');
+    //estado para menú hamburguesa
+    const [ isOpenModalVideo, setisOpenModalVideo ] = useState(false);
     
+    const login = () => {
+      setIsAuthenticated(true);
+  };
+  const logout = () => {
+      setIsAuthenticated(false);
+  };
+  const handleIsOpen = () => {
+      setisOpenModalVideo(true);
+  }
+  const handleIsClose = () => {
+      setisOpenModalVideo(false);
+  }
     // Función para traducir **toda la web**
     const traducirPagina = async (nuevoIdioma) => {
         try {
@@ -50,10 +71,34 @@ const InmobiliariaProvider = ({ children }) => {
         }
     };
 
+    //efecto para el login
+    useEffect(()=>{
+      const userLogin = userData(); 
+      if(userLogin){
+          setUserLog(userLogin);
+          setIsAuthenticated(true);
+          setNombreUser(userLogin.user);
+      }
+    }, []);
+
     return (
-        <InmobiliariaContext.Provider value={{ idioma, setIdioma, traducirPagina }}>
-            {children}
-        </InmobiliariaContext.Provider>
+      <InmobiliariaContext.Provider
+        value={{
+          idioma,
+          setIdioma,
+          traducirPagina,
+          userLog,
+          setUserLog,
+          isAuthenticated,
+          nombreUser,
+          login,
+          logout,
+          isOpenModalVideo,
+          handleIsOpen,
+          handleIsClose,
+        }}>
+        {children}
+      </InmobiliariaContext.Provider>
     );
 };
 
