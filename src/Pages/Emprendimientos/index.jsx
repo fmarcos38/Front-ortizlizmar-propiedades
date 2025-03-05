@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getEmprendimientos } from '../../Redux/Actions';
-import WhatsAppButton from '../../components/BotonWhastApp';
-import Loading from '../../components/Loading';
-import ListaEmprendimientos from '../../components/ListaEmprendimientos';
+import Loading from '../../Components/Loading';
+import ListaEmprendimientos from '../../Components/ListaEmprendimientos';
 import './styles.css';
 
 
@@ -38,7 +37,6 @@ function Emprendimiento() {
                                 <ListaEmprendimientos allEmp={allEmp} />
                             </div>
                         </div>
-                        <WhatsAppButton />
                     </div>
                 )
             }

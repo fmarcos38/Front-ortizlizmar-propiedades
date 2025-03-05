@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import IconoUbicacion from '../../Imagenes/iconoUbicacion.png';
-import IconoSup from '../../Imagenes/Iconos/IconoSup';
-import IconoAmb from '../../Imagenes/Iconos/IconoAmb';
-import IconoDormitorio from '../../Imagenes/Iconos/IconoDormitorios';
+import IconoUbicacion from '../../Images/Iconos/iconoUbicacion.png';
+import IconoSup from '../../Images/Iconos/IconoSup';
+import IconoAmb from '../../Images/Iconos/IconoAmb';
+import IconoDormitorio from '../../Images/Iconos/IconoDormitorios';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import './styles.css';
 

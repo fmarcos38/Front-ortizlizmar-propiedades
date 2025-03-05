@@ -1,11 +1,64 @@
 import axios from "axios";
-import { GET_PROPERTY,  GET_PROPS, IS_OPEN_MODAL_PICTURE, LOADING, 
+import { LOGIN, RESET_LOGIN, GET_PROPERTY,  GET_PROPS, IS_OPEN_MODAL_PICTURE, LOADING, 
     RESET_PROPS, RESET_PROPERTY, GET_EMPRENDIMIENTOS, GET_EMPRENDIMIENTO,
     RESET_EMPRENDIMIENTO, 
 } from "./actionsType";
 import { actual } from "../../url";
 
-//--actions para props
+//---usuarios-----------------------------------
+//---LOGIN--------------------------------------------------------
+export function login(data){ 
+    return async function (dispatch) {
+        const resp = await axios.post(`${actual}/auth/login`, data); 
+        //asigno data del user al localStorage
+        localStorage.setItem("userData", JSON.stringify(resp.data));
+        dispatch({ type: LOGIN, payload: resp.data });        
+    }
+}
+export function resetLogin(){
+    return function(dispatch){
+        dispatch({type: RESET_LOGIN, payload: null})
+    }
+}
+//--usuario------------------------------------------------------
+//crea usuario
+export const creaUsuario = (data) => {
+    return async function() {
+        await axios.post(`${actual}/usuarios/crea`, data);
+    }
+};
+
+//trae usuarios
+export const getUsuarios = () => {
+    return async function(dispatch) {
+        const resp = await axios.get(`${actual}/usuarios`);
+        dispatch({type: 'GET_USUARIOS', payload: resp.data});
+    }
+};
+
+//trae usuario por ID
+export const getUsuario = (_id) => {
+    return async function(dispatch) { 
+        const resp = await axios.get(`${actual}/usuarios/${_id}`);
+        dispatch({type: 'GET_USUARIO', payload: resp.data});
+    }
+};
+
+//edita usuario
+export const editaUsuario = ({_id, data}) => {
+    return async function() { 
+        await axios.put(`${actual}/usuarios/edita/${_id}`, data);
+    }
+};
+
+//elimina usuario
+export const eliminaUsuario = (email) => {
+    return async function() {
+        await axios.delete(`${actual}/usuarios/elimina/`, email);
+    }
+};
+
+//--actions para props-------------------------------------------------------------
 //trae props
 export const getProps = (limit, offset, operacion, tipoPropiedad, ambientes, precioMin, precioMax) => {
     return async function(dispatch) {
@@ -63,6 +116,20 @@ export const resetPropiedades = () => {
         dispatch({type: RESET_PROPS});
     }
 }
+
+//elimina propiedad
+export const eliminaProp = (_id) => {
+    return async function() {
+        await axios.delete(`${actual}/propiedades/eliminaProp/${_id}`);
+    }
+};
+
+//edita propiedad
+export const editaProp = (data) => {
+    return async function() {
+        await axios.put(`${actual}/propiedades/editaProp`, data);
+    }
+};
 
 //--EMPRENDIMIENTOS------------------------------
 //trae emprendimientos

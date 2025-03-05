@@ -20,8 +20,6 @@ function formatDate(date) {
     return `${day}/${month}/${year}`;
 }
 
-
-
 export {
     formatMoney,
     formatDate

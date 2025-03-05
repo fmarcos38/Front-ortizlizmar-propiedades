@@ -50,24 +50,24 @@ export default function rootReducer (state = initialState, action) {
             return{
                 ...state,
                 propiedades: []
-            }
+            };
         case GET_EMPRENDIMIENTOS:
             return{
                 ...state,
                 emprendimientos: action.payload.empNormalizados,
                 loading: false
-            }
+            };
         case GET_EMPRENDIMIENTO:
             return{
                 ...state,
                 emprendimiento: action.payload,
                 loading: false
-            }
+            };
         case RESET_EMPRENDIMIENTO:
             return{
                 ...state,
                 emprendimiento: {}
-            }
+            };
         default:
             return state;
     }
