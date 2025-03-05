@@ -5,7 +5,7 @@ import './estilos.css';
 function LoginPage() {
     
     return (
-        <div className='cont-login-page'>
+        <div className='page cont-login-page'>
             <Login />
         </div>
     )

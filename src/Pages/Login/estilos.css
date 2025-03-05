@@ -1,8 +1,5 @@
 .cont-login-page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 89.9vh;
+    height: 100vh;
     background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgb(66, 56, 44) 100%);
 }

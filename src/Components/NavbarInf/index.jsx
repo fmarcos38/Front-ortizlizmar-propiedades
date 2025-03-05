@@ -33,36 +33,44 @@ function NavbarInf({logout, userLog}) {
                 <div className='col-2-navbarInf'>
                     <ul className='ul-navbarInf'>
                         <li data-translate>
-                            <NavLink to='/venta' >
+                            <NavLink to='/venta' className={'navlink-navbarInf'}>
                                 Venta
                             </NavLink>
                         </li>
                         <li data-translate>
-                            <NavLink to='/alquiler' >
+                            <NavLink to='/alquiler' className={'navlink-navbarInf'}>
                                 Alquiler
                             </NavLink>
                         </li>
                         <li data-translate>
-                            <NavLink to='/emprendimientos' >
+                            <NavLink to='/emprendimientos' className={'navlink-navbarInf'}>
                                 Emprendimientos
                             </NavLink>
                         </li>
                         <li data-translate>
-                            <NavLink to='/internacional' >
+                            <NavLink to='/internacional' className={'navlink-navbarInf'}>
                                 Internacional
                             </NavLink>
                         </li>
                         {
                             userLog?.isAdmin === false && (
                                 <li data-translate>
-                                    <NavLink to='/favoritos' >
+                                    <NavLink to='/favoritos' className={'navlink-navbarInf'}>
                                         Favoritos
                                     </NavLink>
                                 </li>
                             )
                         }
-                        <li data-translate>Nosotros</li>
-                        <li data-translate>Contacto</li>
+                        <li data-translate>
+                            <NavLink to='/nosotros' className={'navlink-navbarInf'}>
+                                Nosotros
+                            </NavLink>
+                        </li>
+                        <li data-translate>
+                            <NavLink to='/contacto' className={'navlink-navbarInf'}>
+                                Contacto
+                            </NavLink>
+                        </li>
                         {
                             userLog?.isAdmin && (
                                 <li

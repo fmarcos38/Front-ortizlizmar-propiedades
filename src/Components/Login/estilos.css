@@ -1,29 +1,34 @@
-.cont-componente-login{
+.cont-componente-login {
     width: 40%;
-    height: 80%;
+    height: 60%;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     border-radius: 20px;
+    margin-top: 100px;
     background-color: #212021;
 }
-.cont-form-login{
+
+.cont-form-login {
     width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.tittulo-login{
+
+.tittulo-login {
     margin: 20px 0 50px 0;
-    color: #d7d5d5;
+    color: white;
 }
+
 .form__group {
     position: relative;
     padding: 20px 0 0;
     width: 90%;
     margin-bottom: 30px;
 }
+
 .form__field {
     font-family: inherit;
     width: 100%;
@@ -31,23 +36,26 @@
     border-bottom: 2px solid #6b6b6b;
     outline: 0;
     font-size: 17px;
-    color: #fff;
+    color: white;
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
 }
+
 .form__field::placeholder {
     color: transparent;
 }
+
 .form__label {
     position: absolute;
     top: 0;
     display: block;
     transition: 0.2s;
     font-size: 17px;
-    color: #f6f3f3;
+    color: white;
     pointer-events: none;
 }
+
 .form__field:focus {
     padding-bottom: 6px;
     font-weight: 700;
@@ -55,28 +63,34 @@
     border-image: linear-gradient(to right, #03f7ef, #212021);
     border-image-slice: 1;
 }
+
 .form__field:focus~.form__label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 17px;
+    top: -20px;
+    font-size: 14px;
     color: #06c0f4;
     font-weight: 700;
 }
-.cont-btn-login{
+
+.form__field:not(:placeholder-shown)~.form__label {
+    top: -20px;
+    font-size: 14px;
+    color: white;
+}
+
+.cont-btn-login {
     width: 80%;
     display: flex;
     justify-content: center;
     margin-top: 70px;
 }
-.btn-login{
+
+.btn-login {
     width: 70%;
 }
 
 /* responsive */
-@media screen and (max-width: 768px){
-    .cont-componente-login{
+@media screen and (max-width: 768px) {
+    .cont-componente-login {
         width: 90%;
     }
 }
