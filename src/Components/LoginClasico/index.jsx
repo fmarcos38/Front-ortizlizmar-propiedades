@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, resetLogin } from '../../Redux/Actions';
+import { InmobiliariaContext } from '../../Context';
+import { userData } from '../../localStorage';
 import EmailIcon from '@mui/icons-material/Email';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import Swal from 'sweetalert2';
@@ -9,11 +12,15 @@ import './styles.css';
 
 function LoginClasico() {
 
-    const usuarioLog = useSelector(state => state.usuario); //datos del usuario 
+    const [, setUser] = useState();
+    const userLog = useSelector(state => state.usuario); 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState({}); 
+    const errorUserLog = useSelector(state => state.error);  
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const contexto = useContext(InmobiliariaContext);
 
     //valida errores
     const validate = () => {
@@ -66,27 +73,35 @@ function LoginClasico() {
         }
     };
 
-    //efecto para disparar msj de error q viene del back
     useEffect(() => {
-        if(usuarioLog?.message === 'ok'){
-            //volver a la pagina anterior
-            window.history.back();
+        setUser(userLog);
+    }, [errorUserLog, userLog])
+
+    useEffect(()=>{
+        
+        if(userLog?.message === 'ok'){
+        //actualizo data del user log en el contexto
+        const userLogActual = userData();
+        contexto.setUserLog(userLogActual);
+        contexto.login();
+        navigate('/');
+        window.location.reload();
         }
-        if(usuarioLog?.message === 'Email incorrecto'){
+        if(userLog?.message === 'Email incorrecto'){
             Swal.fire({
                 text: 'Email incorrecto',
                 icon: 'error'
             });
             dispatch(resetLogin());
         }
-        if(usuarioLog?.message === 'Contraseña incorrecta'){
+        if(userLog?.message === 'Contraseña incorrecta'){
             Swal.fire({
                 text: 'Contraseña incorrecta',
                 icon: 'error'
             });
             dispatch(resetLogin());
         }
-    },[dispatch, usuarioLog?.message]);
+    },[contexto, dispatch, navigate, userLog]);
 
 
     return (
@@ -134,7 +149,7 @@ function LoginClasico() {
                 Recuperar contraseña
             </button>
         </div>
-    );
+    )
 }
 
 export default LoginClasico;
