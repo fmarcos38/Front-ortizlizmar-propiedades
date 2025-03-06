@@ -20,7 +20,6 @@
 /* col-2-logo-navbarInf */
 .col-2-logo-navbarInf{
     width: 20%;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +33,7 @@
 .logo-navbarInf{
     position: relative;
     width: 90%;
-    height: 65px;
+    height: 60px;
     top: -10px;
 }
 .logo-navbarInf:hover{
@@ -80,7 +79,7 @@
     font-size:x-large;
     font-weight: 600;
     margin-left: 30px;
-    color: var(--color-blanco);
+    color: var(--color-fuente);
     cursor: pointer;
 }
 .navbar-item-admin:hover {
@@ -90,17 +89,18 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--color-negro);
+    background-image: url('../../Images/Textura-04.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     list-style: none;
     margin: 0;
     padding: 0;
     width: 130px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 .dropdown-item {
     padding: 0.5rem;
-    color: var(--color-blanco);
+    color: var(--color-fuente);
     cursor: pointer;
     font-size: large;
 }
@@ -109,6 +109,7 @@
 }
 .link-menu {
     text-decoration: none;
+    color: var(--color-fuente);
 }
 /* btn logout */
 .btn-navbarInf{

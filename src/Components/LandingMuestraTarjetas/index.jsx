@@ -37,25 +37,25 @@ function LandingMuestraTarjetas() {
                     ref={(el) => (tarjetasRef.current[0] = el)}
                     className={`cont-tarjeta-1 ${visibleIndex.includes(0) ? 'animada' : ''}`}
                 >
-                    <CardLanding imagen={ImgCardVenta} titulo='Propiedades en Venta' />
+                    <CardLanding imagen={ImgCardVenta} titulo='Propiedades en Venta' url='ventas'/>
                 </div>
                 <div
                     ref={(el) => (tarjetasRef.current[1] = el)}
                     className={`cont-tarjeta-2 ${visibleIndex.includes(1) ? 'animada' : ''}`}
                 >
-                    <CardLanding imagen={ImgCardAlquiler} titulo='Propiedades en Alquiler' />
+                    <CardLanding imagen={ImgCardAlquiler} titulo='Propiedades en Alquiler' url='alquiler'/>
                 </div>
                 <div
                     ref={(el) => (tarjetasRef.current[2] = el)}
                     className={`cont-tarjeta-3 ${visibleIndex.includes(2) ? 'animada' : ''}`}
                 >
-                    <CardLanding imagen={ImgCardEmprendimientos} titulo='Emprendimientos' />
+                    <CardLanding imagen={ImgCardEmprendimientos} titulo='Emprendimientos' url='emprendimientos'/>
                 </div>
                 <div
                     ref={(el) => (tarjetasRef.current[3] = el)}
                     className={`cont-tarjeta-4 ${visibleIndex.includes(3) ? 'animada' : ''}`}
                 >
-                    <CardLanding imagen={ImgCardExterior} titulo='Propiedades en el Exterior' />
+                    <CardLanding imagen={ImgCardExterior} titulo='Propiedades en el Exterior' url='internacional'/>
                 </div>
             </div>
         </div>

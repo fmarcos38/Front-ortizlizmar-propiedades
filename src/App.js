@@ -20,6 +20,7 @@ import ListaUsuariosPage from './Pages/ListaUsuariosPage';
 import EditaUsuarioPage from './Pages/EditaUsuario';
 import Footbar from './Components/Footbar';
 import './App.css';
+import PropsInternacionales from './Pages/PropsInternacionales';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
             <Route path='/ventas' element={<PropsVenta />} />
             <Route path='/alquiler' element={<PropsAlquiler />} />
             <Route path='/emprendimientos' element={<Emprendimientos />} />
+            <Route path='/internacional' element={<PropsInternacionales />} />
             <Route path='/nosotros' element={<NosotrosPage />} />
             <Route path='/contacto' element={<Contactanos />} />
             <Route path='/detalle/:id' element={<DetalleProp />} />

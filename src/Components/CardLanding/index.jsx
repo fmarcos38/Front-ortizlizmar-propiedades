@@ -1,7 +1,8 @@
 import React from 'react'
 import './styles.css'
+import { NavLink } from 'react-router-dom'
 
-function CardLanding({imagen, titulo}) {
+function CardLanding({imagen, titulo, url}) {
   return (
     <div className='cont-tarjeta'>
         <div className='cont-img-tarjeta'>
@@ -11,7 +12,9 @@ function CardLanding({imagen, titulo}) {
             <h2 className='titulo-tarjeta'>{titulo}</h2>
         </div>
         <div className='cont-btn'>
-            <button className='btn-comprar'>Ingresar</button>
+            <NavLink to={`/${url}`} style={{textDecoration: 'none'}}>
+              <button className='btn-comprar'>Ingresar</button>
+            </NavLink>
         </div>
     </div>
   )
