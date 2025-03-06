@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: azure;
 }
 .titulo-busqueda{
     width: 900%;
@@ -47,7 +48,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: start;
-    background-color: rgb(200, 199, 199);
 }
 
 /* responsive */

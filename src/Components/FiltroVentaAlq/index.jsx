@@ -16,7 +16,7 @@ function FiltroVentaAlq({setOperacion}) {
     return (
         <div className='cont-venta-alq'>
             <div className='sub-cont-venta-alq'>
-                <div className='cont-venta'>
+                <div className='cont-venta-filtro'>
                     <label className='label-venta-alq'>Venta</label>
                     <input
                         id='Venta'
@@ -27,7 +27,7 @@ function FiltroVentaAlq({setOperacion}) {
                         className='input-venta-alq'
                     />
                 </div>
-                <div className='cont-alq'>
+                <div className='cont-alq-filtro'>
                     <label className='label-venta-alq'>Alquiler</label>
                     <input
                         id='Alquiler'
