@@ -33,7 +33,7 @@ function NavbarInf({logout, userLog}) {
                 <div className='col-2-navbarInf'>
                     <ul className='ul-navbarInf'>
                         <li data-translate>
-                            <NavLink to='/venta' className={'navlink-navbarInf'}>
+                            <NavLink to='/ventas' className={'navlink-navbarInf'}>
                                 Venta
                             </NavLink>
                         </li>

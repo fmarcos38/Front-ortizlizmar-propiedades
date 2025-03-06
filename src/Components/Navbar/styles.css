@@ -6,29 +6,13 @@
     align-items: center;
     width: 100vw; /* Asegura que ocupe todo el ancho de la pantalla */
     height: 70px;
-    background: transparent;
+    background-image: url('../../Images/Textura-04.jpg');
+    background-size: cover;
+    background-position: center;
     transition: all 0.4s ease-in-out;
     z-index: 1000;
     left: 0; /* Evita que se mueva con el scroll horizontal */
     top: 0; /* Se mantiene siempre en la parte superior */
-}
-
-/* Estilos cuando el usuario hace scroll */
-.scrolled {
-    background-image: url('../../Images/Textura-04.jpg');
-    background-size: cover;
-    background-position: center;
-    animation: slideDown 0.4s forwards;
-}
-
-/* Animación de entrada */
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
 }
 
 /* Evitar desbordamiento horizontal */
