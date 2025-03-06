@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
-function MenuHamburguesa() {
+function MenuHamburguesa({userLog}) {
     
     const [menu, setMenu] = useState(false);
     const menuRef = useRef(null); // Referencia para el menú hamburguesa
@@ -69,6 +69,28 @@ function MenuHamburguesa() {
                     <li onClick={toggleMenu}>
                         <Link to='/contacto' ref={el => menuItemsRef.current[6] = el}>Contacto</Link>
                     </li>
+                    {
+                        userLog?.isAdmin === true ? (
+                            <>
+                                <li onClick={toggleMenu}>
+                                    <Link to='/admin/creaPropiedad' ref={el => menuItemsRef.current[6] = el} >Crea Propiedad</Link>
+                                </li>
+                                <li onClick={toggleMenu}>
+                                    <Link to='/admin/propiedades' ref={el => menuItemsRef.current[7] = el}>Lista Props</Link>
+                                </li>
+                                <li onClick={toggleMenu}>
+                                    <Link to='/admin/usuarios' ref={el => menuItemsRef.current[8] = el}>Crea Usuarios</Link>
+                                </li>
+                                <li onClick={toggleMenu}>
+                                    <Link to='/admin/usuarios' ref={el => menuItemsRef.current[9] = el}>Lista Usuarios</Link>
+                                </li>
+                            </>
+                        ) : (
+                            <li data-translate>
+                                <Link to='/favoritos' className={'navlink-navbarInf'}>Favoritos</Link>
+                            </li>
+                        )
+                    }
                 </ul>
             </div>
         </div>

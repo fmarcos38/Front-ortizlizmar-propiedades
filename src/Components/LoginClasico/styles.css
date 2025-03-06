@@ -89,17 +89,14 @@
 .p-login{
     color: white;
     font-size: 18px;
-    margin: 0;
+    margin: 10px 0;
 }
 .register-button-login{
-    color: black;
-    font-size: 16px;
-    cursor: pointer;
     margin-bottom: 10px;
 }
 
 /* responsive */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .login-container {
         width: 95%;
     }

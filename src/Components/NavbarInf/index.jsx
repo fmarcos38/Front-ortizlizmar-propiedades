@@ -23,7 +23,7 @@ function NavbarInf({logout, userLog}) {
         <div className='cont-navbarInf'>
             <div className='sub-cont-navbarInf'>
                 <div className='col-1-navbarInf'>
-                    <MenuHamburguesa />
+                    <MenuHamburguesa userLog={userLog}/>
                 </div>
                 <div className='col-2-logo-navbarInf'>
                     <NavLink to='/' className='navlink-navbarInf'>

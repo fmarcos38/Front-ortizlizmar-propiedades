@@ -77,8 +77,7 @@ function LoginClasico() {
         setUser(userLog);
     }, [errorUserLog, userLog])
 
-    useEffect(()=>{
-        
+    useEffect(()=>{        
         if(userLog?.message === 'ok'){
         //actualizo data del user log en el contexto
         const userLogActual = userData();
@@ -145,7 +144,10 @@ function LoginClasico() {
                 <button type="submit" className="login-button">Login</button>
             </form>
             <p className='p-login'>¿Olvidaste tu contraseña o email?</p>
-            <button type='button' className="register-button-login" onClick={() => window.location.href = '/recuperarDatosUsuario'}>
+            <button type='button' 
+                className="register-button-login" 
+                onClick={() => window.location.href = '/recuperarDatosUsuario'}
+            >
                 Recuperar contraseña
             </button>
         </div>
