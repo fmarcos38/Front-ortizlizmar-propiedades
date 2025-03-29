@@ -1,9 +1,0 @@
-.contenedor-crea-prop {
-    width: 100%;
-    min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-    background-color: rgb(193, 194, 194);
-}

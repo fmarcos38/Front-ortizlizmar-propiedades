@@ -197,13 +197,13 @@ function FormularioProp({propiedad, handleOnSubmit, op}) {
             && provincia; 
     };
     //valida vista 3
-    /* const validaDatosVista3 = () => {
+    const validaDatosVista3 = () => {
         return ambientes
             && dormitorios
             && baños
             && supCubierta
             && supTotal;
-    }; */
+    };
     //valida vista 4
     const validaDatosVista4 = () => {
         if(imagenes.length){
@@ -291,7 +291,7 @@ function FormularioProp({propiedad, handleOnSubmit, op}) {
         setVista3(false);
     };
     const onClickSgtVista3 = () => {
-        /* let hasErrors = false;
+        let hasErrors = false;
         const newErrors = {};
 
         if(!ambientes){
@@ -313,12 +313,12 @@ function FormularioProp({propiedad, handleOnSubmit, op}) {
         if(!supTotal){
             newErrors.supTotal = 'Campo requerido';
             hasErrors = true;
-        } */
+        }
         //setErrors(newErrors);
         // Si hay errores, no avanzar
-        /* if (hasErrors) {
+        if (hasErrors) {
             return;
-        } */
+        }
         setVista1(false);
         setVista2(false);
         setVista3(false);
@@ -397,7 +397,7 @@ function FormularioProp({propiedad, handleOnSubmit, op}) {
     }
 
 
-    //ejecuto funcion para asignar moneda SI la prop está en Venta y Alq
+    //efecto para asignar moneda SI la prop está en Venta y/o Alq
     useEffect(() => {
         if(operacion === "Venta" && monedaVenta){
             setMoneda(monedaVenta);
@@ -420,7 +420,7 @@ function FormularioProp({propiedad, handleOnSubmit, op}) {
             document.getElementById('monedaVenta').value = 'Moneda';
         }
     }, [monedaVenta, monedaAlq, operacion]);
-    //ejecuto funcion para asignar precio SI la prop está en Venta y Alq
+    //ejecuto para asignar precio SI la prop está en Venta y Alq
     useEffect(() => {
         if(operacion === "Venta" && precioVenta){
             setPrecio(precioVenta);
@@ -1130,7 +1130,7 @@ function FormularioProp({propiedad, handleOnSubmit, op}) {
                     className={
                         validaDatosVista1() && 
                         validaDatosVista2() && 
-                        //validaDatosVista3() &&
+                        validaDatosVista3() &&
                         validaDatosVista4()
                         ? 'cont-botones-crea-prop' 
                         : 'cont-botones-crea-prop-Disable'
