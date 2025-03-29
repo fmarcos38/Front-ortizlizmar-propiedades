@@ -41,6 +41,7 @@
     margin-top: 60px;
 }
 .tituloLanding, .textoLanding-p, .texto-inf-landing, .logoNuevoLanding {
+    margin: 0;
     opacity: 0;
     transform: translateX(50px);
     animation: slideIn 1s forwards;
@@ -58,6 +59,19 @@
         opacity: 1;
         transform: translateX(0);
     }
+}
+.tituloLanding, .textoLanding-p, .texto-inf-landing {
+    color: var(--color-fuente);
+    text-align: center;
+    margin-bottom: 10px;
+}
+.textoLanding-p{
+    font-size: 1.5em;
+    font-weight: 500;
+} 
+.texto-inf-landing {
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 /* estilos logo */
 .cont-logoNuevo-landing{
