@@ -20,9 +20,9 @@ function Home() {
     //estados para las propiedades
     const [operacion, setOperacion] = useState('');
     const [tipoPropiedad, setTipoPropiedad] = useState('todas'); 
-    const [ambientes, setAmbientes] = useState('0'); //en el back lo convierto a int
+    const [ambientes, setAmbientes] = useState(); //en el back lo convierto a int
     const [precioMin, setPrecioMin] = useState(10000);
-    const [precioMax, setPrecioMax] = useState(1000000);
+    const [precioMax, setPrecioMax] = useState(10000000);
     //estados para paginación
     const [currentPage, setCurrentPage] = useState(1);
     const propiedadesPorPagina = 12;
