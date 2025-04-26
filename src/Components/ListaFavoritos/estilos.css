@@ -1,16 +1,45 @@
-.cont-listaProps-fav{
+.cont-listaProps-fav {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: center;
 }
-
-.cont-card-lista-props{
+.cont-card-lista-props {
     width: 95%;
     height: auto;
     display: flex;
+    
     flex-wrap: wrap; /* para el orden de las CARDS */
     justify-content: center; /* eje x */
-    align-items: start;
+    align-items: center;
+}
+/* estilos btns de los tipos de props */
+.cont-filtros {
+    display: flex;
+    padding: 20px 5px;
+    flex-direction:row;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(136, 136, 137);
+}
+.cont-filtros button {
+    width: 100px;    
+    padding: 8px 18px;
+    border: none;
+    background-color: white;
+    color: #007bff;
+    font-weight: 500;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+.cont-filtros button:hover {
+    background-color: #007bff;
+    color: white;
+}
+.cont-filtros button.activo {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
 }
