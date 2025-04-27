@@ -6,7 +6,7 @@ import ListaPropiedades from '../../Components/ListaPropiedades';
 import Paginacion from '../../Components/Paginacion';
 import Loading from '../../Components/Loading';
 
-function PropsVenta() {
+function PropsAlquiler() {
 
     const loading = useSelector(state => state.loading);
     const [operacion, setOperacion] = useState('Alquiler');
@@ -76,4 +76,4 @@ function PropsVenta() {
     )
 }
 
-export default PropsVenta;
+export default PropsAlquiler;

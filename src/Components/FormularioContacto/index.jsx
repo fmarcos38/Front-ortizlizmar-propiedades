@@ -98,8 +98,7 @@ const FormularioContacto = ({ tituloPublicacion, codigoReferencia }) => {
     }, [mensaje]); // Reajustamos la altura cada vez que cambia el mensaje
 
     return (
-        <div className='cont-formulario'>
-            <form onSubmit={handleSubmit} className='div-cont-form'>
+        <form onSubmit={handleSubmit} className='div-cont-form'>
                 <div className='cont-logo-form'>
                     <img src={LogoTextoNegro} alt='' className='form-logo'/>
                 </div>
@@ -158,8 +157,7 @@ const FormularioContacto = ({ tituloPublicacion, codigoReferencia }) => {
                         </button>
                     </div>
                 </div>
-            </form>
-        </div>
+        </form>
     );
 };
 
