@@ -4,7 +4,7 @@ import Card from '../Card';
 import './estilos.css';
 
 const arrayFiltros = [
-    'Depto', 'Casa', 'PH', 'Local', 
+    'Depto', 'Casa', 'PH', 'Local',
     'Oficina', 'Cochera', 'Terreno', 'Galpón',
 ];
 
@@ -20,7 +20,7 @@ function ListaFavoritos({ allProps }) {
         <div className='cont-listaProps-fav'>
             <h1>Tus propiedades favoritas</h1>
             {/* Botones de filtros */}
-            <div className="cont-filtros">
+            <div className="cont-filtros-fav">
                 {/* btn Todas */}
                 <button onClick={() => setFiltro('')} className={filtro === '' ? 'activo' : ''}>
                     Todas

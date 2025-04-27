@@ -17,7 +17,7 @@ function FavoritosPage() {
 
 
     return (
-        <div className='favoritosPage'>
+        <div >
             <ListaFavoritos allProps={fav} />            
         </div>
     )
