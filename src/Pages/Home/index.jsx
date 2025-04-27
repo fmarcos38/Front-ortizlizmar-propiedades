@@ -19,7 +19,7 @@ function Home() {
     const totalPropiedades = useSelector(state => state.totPropiedades);
     //estados para las propiedades
     const [operacion, setOperacion] = useState('');
-    const [tipoPropiedad, setTipoPropiedad] = useState('todas'); 
+    const [tipoPropiedad, setTipoPropiedad] = useState('todas'); console.log("tipoP:", tipoPropiedad)
     const [ambientes, setAmbientes] = useState(); //en el back lo convierto a int
     const [precioMin, setPrecioMin] = useState(100);
     const [precioMax, setPrecioMax] = useState(10000000);
