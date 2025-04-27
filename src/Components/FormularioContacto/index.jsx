@@ -99,10 +99,6 @@ const FormularioContacto = ({ tituloPublicacion, codigoReferencia }) => {
 
     return (
         <form onSubmit={handleSubmit} className='div-cont-form'>
-                <div className='cont-logo-form'>
-                    <img src={LogoTextoNegro} alt='' className='form-logo'/>
-                </div>
-
                 <div className="form__group field">
                     <input required className="form__field" type="text" name='nombre' value={nombre} onChange={(e) => setNombre(e.target.value)} />
                     <label className="form__label" htmlFor="name" data-translate>Nombre y Apellido</label>

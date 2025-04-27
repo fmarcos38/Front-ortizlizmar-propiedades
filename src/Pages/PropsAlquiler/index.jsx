@@ -11,8 +11,8 @@ function PropsAlquiler() {
     const loading = useSelector(state => state.loading);
     const [operacion, setOperacion] = useState('Alquiler');
     const [tipoPropiedad, setTipoPropiedad] = useState('todas');
-    const [ambientes, setAmbientes] = useState('0');
-    const [precioMin, setPrecioMin] = useState(10000);
+    const [ambientes, setAmbientes] = useState();
+    const [precioMin, setPrecioMin] = useState(100);
     const [precioMax, setPrecioMax] = useState(1000000);
     const [currentPage, setCurrentPage] = useState(1);
     const allProps = useSelector(state => state.propiedades);
