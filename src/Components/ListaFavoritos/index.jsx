@@ -18,11 +18,11 @@ function ListaFavoritos({ allProps }) {
 
     return (
         <div className='cont-listaProps-fav'>
-            <h1>Tus propiedades favoritas</h1>
+            <h1 data-translate>Tus propiedades favoritas</h1>
             {/* Botones de filtros */}
             <div className="cont-filtros-fav">
                 {/* btn Todas */}
-                <button onClick={() => setFiltro('')} className={filtro === '' ? 'activo' : ''}>
+                <button onClick={() => setFiltro('')} className={filtro === '' ? 'activo' : ''} data-translate>
                     Todas
                 </button>
                 {
@@ -31,6 +31,7 @@ function ListaFavoritos({ allProps }) {
                             key={tipo}
                             onClick={() => setFiltro(tipo)}
                             className={filtro === tipo ? 'activo' : ''}
+                            data-translate
                         >
                             {tipo}
                         </button>
