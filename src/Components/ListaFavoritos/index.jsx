@@ -40,7 +40,7 @@ function ListaFavoritos({ allProps }) {
             </div>
 
             {/* Lista de propiedades */}
-            <div className='cont-card-lista-props'>
+            <div className='cont-card-lista-props-fav'>
                 {
                     propsFiltrados.length ? (
                         propsFiltrados.map(p => (

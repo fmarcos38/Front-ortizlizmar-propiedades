@@ -66,8 +66,7 @@
 }
 .ul-navbarInf > li{
     list-style: none;
-    font-size: 18px;
-    
+    font-size: 18px;    
     color: white;
 }
 .navlink-navbarInf{
@@ -82,62 +81,27 @@
     justify-content: end;
     align-items: center;
 }
-/* estilos menú ADMIN */
-.navbar-item-admin {
-    position: relative;
-    font-size:x-large;
-    font-weight: 600;
-    margin-left: 30px;
-    color: var(--color-fuente);
-    cursor: pointer;
-}
-.navbar-item-admin:hover {
-    color: #ddd;
-}
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-image: url('../../Images/Textura-04.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 130px;
-    z-index: 1000;
-}
-.dropdown-item {
-    padding: 0.5rem;
-    color: var(--color-fuente);
-    cursor: pointer;
-    font-size: large;
-}
-.dropdown-item:hover {
-    background-color: #555;
-}
-.link-menu {
-    text-decoration: none;
-    color: var(--color-fuente);
-}
-/* btn logout */
-.btn-navbarInf{
-    border: none;
-    background-color: transparent;
-}
+
 
 /* responsive */
-@media screen and (max-width: 700px) {
-    .logoR-navbarInf{
+@media screen and (max-width: 900px) {
+    .ul-navbarInf > li{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 720px) {
+    /* col-1 */
+    .items-nav{
+        display: none;
+    }
+    .col-1-navbarInf{
+        display: flex;
+    }
+    .logo-navbarInfR{
         position: relative;
-        width: 70px;
-        height: 70px;
+        width: 100px;
+        height: 80px;
+        top: 0px;
     }
 }
-@media screen and (max-width: 450px) {
-    .logoR-navbarInf{
-        width: 70px;
-        height: 70px;
-        margin-top: 15px;
-    }
-}
+

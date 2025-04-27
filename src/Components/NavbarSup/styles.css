@@ -28,6 +28,11 @@
 }
 
 /* responsive */
+@media screen and (max-width: 720px) {
+    .cont-navbarSup{
+        display: none;
+    }
+}
 @media screen and (max-width: 660px) {
     .p-tel-navSup{
         font-size: 12px;

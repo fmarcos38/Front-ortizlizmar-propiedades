@@ -6,7 +6,7 @@
     margin-top: 80px;
     background-color: rgb(171, 172, 172);
 }
-.cont-card-lista-props {
+.cont-card-lista-props-fav {
     width: 95%;
     height: auto;
     display: flex;    
@@ -55,6 +55,9 @@
 @media screen and (max-width: 1050px) {
     .cont-listaProps-fav h1{
         text-align: center;
+    }
+    .cont-card-lista-props-fav {
+        justify-content: space-around; /* eje x */
     }
     /* estilos btns de los tipos de props */
     .cont-filtros-fav {
