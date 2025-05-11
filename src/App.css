@@ -1,7 +1,7 @@
 :root {
     --fondo-page: white;
     --fondo-navbar: rgba(1, 22, 41); /* mismo q el del logo */
-    --color-fuente: white;
+    --color-fuente: black;
 }
 
 .page {

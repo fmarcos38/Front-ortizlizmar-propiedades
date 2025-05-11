@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import LogoTextoNegro from '../../Images/logo-blanco.webp';
+//import LogoTextoNegro from '../../Images/logo-blanco.webp';
 import './styles.css';
 
 const FormularioContacto = ({ tituloPublicacion, codigoReferencia }) => { 

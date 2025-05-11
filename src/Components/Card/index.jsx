@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import IconoUbicacion from '../../Images/Iconos/iconoUbicacion.png';
 import Favorito from '../Favoritos';
-import IconoSup from '../../Images/Iconos/IconoSup';
-import IconoAmb from '../../Images/Iconos/IconoAmb';
-import IconoDormitorio from '../../Images/Iconos/IconoDormitorios';
+import HomeIcon from '@mui/icons-material/Home';
+import TagIcon from '@mui/icons-material/Tag';
+import HotelIcon from '@mui/icons-material/Hotel';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import { formatMoney } from '../../Helps';
 import './styles.css'
+
 
 function Card({ id, direccionF, cantCocheras, operacion, imagenes, tituloPublicacion, ambientes, dormitorios, supTotal, unidadMedida, tipo }) {
 
@@ -16,11 +17,6 @@ function Card({ id, direccionF, cantCocheras, operacion, imagenes, tituloPublica
 
     return (
         <div className='contCard'>
-            {/* titulo */}
-            <div className='card-title'>
-                <h2 className='titulo-card' data-translate>{operacion[0].operacion}</h2>
-            </div>
-
             {/* img + animacion + abre detalle */}
             <NavLink to={`/detalle/${id}`} className='navLink-car'>
                 <div
@@ -39,18 +35,23 @@ function Card({ id, direccionF, cantCocheras, operacion, imagenes, tituloPublica
                 </div>
             </NavLink>
 
+            {/* titulo */}
+            <div className='card-title'>
+                <h2 className='titulo-card' data-translate>{operacion[0].operacion}</h2>
+            </div>
+
             {/* info 1 */}
             <div className='card-info1'>
                 <div className='cont-titulo-publicacion-card'>
-                    <span className='tituloPublicacion' data-translate>{tituloPublicacion}</span>
+                    <h5 className='tituloPublicacion' data-translate>{tituloPublicacion}</h5>
                 </div>
                 <div className='cont-info1'>
                     <img src={IconoUbicacion} alt='iconoUbi' style={{width:'30px', height:'30px'}}/>
-                    <span className='direccion-card' data-translate>
+                    <p className='direccion-card' data-translate>
                         {/* Barrio: {ubicacion.barrio} | */} {direccionF}
-                    </span>
+                    </p>
                 </div>
-
+                {/* precio */}
                 <div className='cont-precio-fav'>
                     <div className='cont-precio'>
                         <p className='precio'>
@@ -78,28 +79,31 @@ function Card({ id, direccionF, cantCocheras, operacion, imagenes, tituloPublica
             {/* info 2 */}
             <div className='card-info2'>
                 <div className='div-info2'>
-                    <IconoSup />                    
+                    <HomeIcon />                    
                     <p className='info2' data-translate>Superficie</p>
-                    <p className='info2'>{supTotal}m2</p>
+                    <p className='info2'>
+                        {supTotal}m
+                        <sup>2</sup>
+                    </p>
                 </div>
 
                 {
                     tipo?.name !== "Terreno" && (
                         <>
                             <div className='div-info2'>
-                                <IconoAmb />
+                                <TagIcon />
                                 <p className='info2' data-translate>Ambientes</p>
                                 <p className='info2'>{ambientes}</p>
                             </div>
 
                             <div className='div-info2'>
-                                <IconoDormitorio />
+                                <HotelIcon />
                                 <p className='info2' data-translate>Dormitorios</p>
                                 <p className='info2'>{dormitorios}</p>
                             </div>
 
                             <div className='div-info2'>
-                                <DirectionsCarIcon sx={{ color: 'rgba(171, 132, 94, 1)', width: '28px', height: '28px' }} />
+                                <DirectionsCarIcon />
                                 <p className='info2' data-translate>Cocheras</p>
                                 <p className='info2'>{cantCocheras}</p>
                             </div>

@@ -9,7 +9,7 @@ function Navbar() {
     useEffect(() => {
         const handleScroll = () => {
             if (window.innerWidth > 500) { // Solo aplica el efecto en pantallas mayores a 500px
-                if (window.scrollY > 1400) {
+                if (window.scrollY > 1) {
                     setScrolled(true);
                 } else {
                     setScrolled(false);
