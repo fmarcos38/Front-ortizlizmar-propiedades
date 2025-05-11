@@ -4,7 +4,14 @@
     --color-fuente: black;
     --gris-fondo: #EEEEED
 }
-
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ocupa toda la altura de la pantalla */
+}
+.main-content {
+    flex: 1;
+}
 .page {
     width: 100%;
     min-height: 90vh;

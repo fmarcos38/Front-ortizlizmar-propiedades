@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { formatMoney } from '../../Helps';
 import IconoUbicacion from '../../Images/Iconos/iconoUbicacion.png';
 import Favorito from '../Favoritos';
 import HomeIcon from '@mui/icons-material/Home';
 import TagIcon from '@mui/icons-material/Tag';
 import HotelIcon from '@mui/icons-material/Hotel';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import { formatMoney } from '../../Helps';
-import './styles.css'
 import IconoSup from '../../Images/Iconos/IconoSup';
+import './styles.css'
+
 
 
 function Card({ id, direccionF, cantCocheras, operacion, imagenes, tituloPublicacion, ambientes, dormitorios, supTotal, supCubierta, supDescubierta, unidadMedida, tipo }) {
