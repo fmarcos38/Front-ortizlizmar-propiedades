@@ -8,9 +8,10 @@ import HotelIcon from '@mui/icons-material/Hotel';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import { formatMoney } from '../../Helps';
 import './styles.css'
+import IconoSup from '../../Images/Iconos/IconoSup';
 
 
-function Card({ id, direccionF, cantCocheras, operacion, imagenes, tituloPublicacion, ambientes, dormitorios, supTotal, unidadMedida, tipo }) {
+function Card({ id, direccionF, cantCocheras, operacion, imagenes, tituloPublicacion, ambientes, dormitorios, supTotal, supCubierta, supDescubierta, unidadMedida, tipo }) {
 
     //estado para el hover
     const [showDetail, setShowDetail] = useState(false);
@@ -80,7 +81,7 @@ function Card({ id, direccionF, cantCocheras, operacion, imagenes, tituloPublica
             <div className='card-info2'>
                 <div className='div-info2'>
                     <HomeIcon />                    
-                    <p className='info2' data-translate>Superficie</p>
+                    <p className='info2' data-translate>Sup. Tot</p>
                     <p className='info2'>
                         {supTotal}m
                         <sup>2</sup>
@@ -88,7 +89,26 @@ function Card({ id, direccionF, cantCocheras, operacion, imagenes, tituloPublica
                 </div>
 
                 {
-                    tipo?.name !== "Terreno" && (
+                    tipo?.nombre === "Terreno" ? (
+                        <>
+                            <div className='div-info2'>
+                                <IconoSup />
+                                <p className='info2' data-translate>Sup. Cub</p>
+                                <p className='info2'>
+                                    {supCubierta}m
+                                    <sup>2</sup>
+                                </p>
+                            </div>
+                            <div className='div-info2'>
+                                <IconoSup />
+                                <p className='info2' data-translate>Sup. Desc</p>
+                                <p className='info2'>
+                                    {supDescubierta}m
+                                    <sup>2</sup>
+                                </p>
+                            </div>
+                        </>
+                    ) : (
                         <>
                             <div className='div-info2'>
                                 <TagIcon />

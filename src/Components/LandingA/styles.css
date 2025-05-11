@@ -61,7 +61,7 @@
     }
 }
 .tituloLanding, .textoLanding-p, .texto-inf-landing {
-    color: var(--color-fuente);
+    color: white;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -85,8 +85,8 @@
     align-items: center;
 }
 .logoNuevoLanding{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 20px;
 }
 /* animación */
