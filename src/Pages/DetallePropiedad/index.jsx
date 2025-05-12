@@ -60,9 +60,6 @@ function DetalleProp() {
                     </>
                 ) : (
                     <div className='contGralDetalle'>
-                        <div className='cont-color-oscuro'></div>
-                        <div className='cont-color-blanco'></div>
-                        {/* info */}
                         <div className='cont-detail'>
                             {/* datos principales */}
                             <div className='info-1'>
@@ -208,7 +205,7 @@ function DetalleProp() {
                             </div>
 
                             {/* google map */}
-                            <div className='cont-map'>
+                            <div className='cont-map-detalle'>
                                 <p className='p-titulo-mapa' data-translate>Ubicacion Propiedad</p>
                                 <MapProp lat={propiedad.geoLat} lng={propiedad.geoLong} />
                             </div>
