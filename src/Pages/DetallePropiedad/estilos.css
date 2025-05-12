@@ -1,6 +1,6 @@
 .contGralDetalle{
     position: relative;
-    width: 100%;
+    width: auto;
     min-width: 100vh;
     display: flex;
     flex-direction: column;
@@ -259,6 +259,7 @@
 .cont-map{
     width: 70%;
     height: 550px;
+    background-color: aquamarine;
 }
 .p-titulo-mapa{
     width: 250px;
