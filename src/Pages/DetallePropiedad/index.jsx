@@ -29,19 +29,44 @@ function DetalleProp() {
 
 
     const handleClickAtras = (e) => {
-        if (window.history.length > 1) {
-            navigate(-1);
-        } else {
-            navigate('/'); // Ruta por defecto si no hay historial previo.
-        }
+        navigate(-1);
     };
+
+    // Función para reemplazar puntos por saltos de línea
+    function formatearDescripcion(texto) {
+        if (!texto || typeof texto !== 'string') return '';
+
+        // Dividir el texto en partes que terminan en . o :
+        const partes = texto.split(/(?<=[.:])\s*/);
+
+        const resultado = [];
+        let enLista = false;
+
+        for (let parte of partes) {
+            const linea = parte.trim();
+
+            if (!linea) continue;
+
+            if (linea.endsWith(':')) {
+                resultado.push(linea);
+                enLista = true; // empezamos lista
+            } else if (enLista) {
+                // Si la línea no termina en punto, seguimos en lista
+                resultado.push(`🔸 ${linea}`);
+            } else {
+                resultado.push(linea);
+            }
+        }
+
+        return resultado.join('<br/>');
+    }
 
     //efecto para iniciar la Pag desd la parte SUPERIOR
     useEffect(() => {
         // Desplaza la página hacia la parte superior cuando el componente se monta
         window.scrollTo(0, 0);
     }, []); // El array vacío asegura que se ejecute solo al montar el componente
-    
+
     useEffect(() => {
         dispatch(getProperty(id));
         // Desplazarse hacia la parte superior de la página al cargar el componente
@@ -68,6 +93,7 @@ function DetalleProp() {
                                         {/* btn atrás */}
                                         <div>
                                             <button
+                                                type='button'
                                                 onClick={handleClickAtras}
                                                 className='btn-volver'
                                             >
@@ -121,12 +147,12 @@ function DetalleProp() {
                                             <p>No img</p>
                                     }
                                 </div>
-
+                                
                                 <div className='cont-form-contacto'>
                                     <FormularioContacto
-                                        tituloPublicacion={propiedad.tituloPublicacion}
-                                        codigoReferencia={propiedad.codigoReferencia}
-                                    />
+                                            tituloPublicacion={propiedad.tituloPublicacion}
+                                            codigoReferencia={propiedad.codigoReferencia}
+                                        />
                                 </div>
                             </div>
 
@@ -139,23 +165,23 @@ function DetalleProp() {
                                         <p className='p-col-value'>{moneda}{formatMoney(precio)}</p>
                                     </div>
                                     <div className='cont-p-col-2'>
-                                        <p className='pp-col-key' data-translate>Sup. Cubierta:</p>
-                                        <p className='p-col-value'>{propiedad.supCubierta}{propiedad.unidadMedida}</p>
-                                    </div>
-                                    <div className='cont-p-col-3'>
                                         <p className='p-col-key' data-translate>Sup. Total:</p>
                                         <p className='p-col-value'>{propiedad.supTotal}{propiedad.unidadMedida}</p>
+                                    </div>
+                                    <div className='cont-p-col-3'>
+                                        <p className='p-col-key' data-translate>Sup. Cubierta:</p>
+                                        <p className='p-col-value'>{propiedad.supCubierta}{propiedad.unidadMedida}</p>
                                     </div>
                                 </div>
 
                                 <div className='col-descrip-fila2'>
                                     <div className='cont-p-col-1'>
-                                        <p className='p-col-key' data-translate>Dormitorios:</p>
-                                        <p className='p-col-value'>{propiedad.dormitorios}</p>
+                                        <p className='p-col-key' data-translate>Ambientes:</p>
+                                        <p className='p-col-value'>{propiedad.ambientes}</p>
                                     </div>
                                     <div className='cont-p-col-2'>
-                                        <p className='pp-col-key' data-translate>Ambientes:</p>
-                                        <p className='p-col-value'>{propiedad.ambientes}</p>
+                                        <p className='p-col-key' data-translate>Dormitorios:</p>
+                                        <p className='p-col-value'>{propiedad.dormitorios}</p>
                                     </div>
                                     <div className='cont-p-col-3'>
                                         <p className='p-col-key' data-translate>Baños:</p>
@@ -188,20 +214,12 @@ function DetalleProp() {
                             </div>
 
                             {/* descrip */}
-                            <div className='cont-descrip'>
-                                <p className='titulo-descrip-prop' data-translate>Descripción Propiedad</p>
-                                <div className='cont-texto-descrip-detalle'>
-                                    {/* Renderizar HTML dentro de la descripción */}
-                                    <p
-                                        className="p-descrip-detalle"
-                                        data-translate
-                                        dangerouslySetInnerHTML={{
-                                            __html: propiedad?.descripcion
-                                                ? propiedad.descripcion.replace(/\n/g, '<br />')
-                                                : '', // Muestra una cadena vacía si descripcion no está definida
-                                        }}
-                                    />
-                                </div>
+                            <div className="cont-texto-descrip-detalle">
+                                <p className='titulo-descrip-prop'>Detalle Propiedad</p>
+                                <div
+                                    className="subCont-texto-descrip-detalle"
+                                    dangerouslySetInnerHTML={{ __html: formatearDescripcion(propiedad.descripcion) }}
+                                />
                             </div>
 
                             {/* google map */}
