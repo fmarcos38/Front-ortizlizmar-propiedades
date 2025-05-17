@@ -106,9 +106,8 @@ function DetalleProp() {
                                     </div>
                                     {/* precio */}
                                     <div className='cont-precio-detalle'>
-                                        <p className='precio-detalle'>
-                                            {moneda}{formatMoney(precio)}
-                                        </p>
+                                        <p className='moneda-detalle'>{moneda}</p>
+                                        <p className='precio-detalle'>{formatMoney(precio)}</p>
                                     </div>
                                 </div>
 
@@ -125,7 +124,6 @@ function DetalleProp() {
 
                             {/* carrusel y formulario */}
                             <div className='cont-imgs-info'>
-
                                 {/* carrusel */}
                                 <div className='cont-imagenes'>
                                     {/* botones multimedia */}

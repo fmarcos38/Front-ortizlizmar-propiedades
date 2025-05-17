@@ -105,10 +105,10 @@
     margin-left: 60px;
 }
 
-.precio-detalle {
+.precio-detalle,
+.moneda-detalle {
     color: white;
     font-size: 20px;
-    margin-right: 20px;
 }
 
 /* estilos seccion imagenes */
@@ -486,7 +486,12 @@
     .detalle-titulo-direccion {
         font-size: 15px;
     }
-
+    .precio-detalle{
+        font-size: 15px;
+    }
+    .moneda-detalle{
+        font-size: 12px;
+    }
     /* estilos seccion imagenes */
     .cont-multimedia{
         width: 40%;
