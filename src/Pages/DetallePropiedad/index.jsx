@@ -36,30 +36,27 @@ function DetalleProp() {
     function formatearDescripcion(texto) {
         if (!texto || typeof texto !== 'string') return '';
 
-        // Dividir el texto en partes que terminan en . o :
         const partes = texto.split(/(?<=[.:])\s*/);
-
         const resultado = [];
         let enLista = false;
 
         for (let parte of partes) {
             const linea = parte.trim();
-
             if (!linea) continue;
 
             if (linea.endsWith(':')) {
-                resultado.push(linea);
-                enLista = true; // empezamos lista
+                resultado.push(`<p>${linea}</p>`);
+                enLista = true;
             } else if (enLista) {
-                // Si la línea no termina en punto, seguimos en lista
-                resultado.push(`🔸 ${linea}`);
+                resultado.push(`<p class="p-viñeta">🔸 ${linea}</p>`);
             } else {
-                resultado.push(linea);
+                resultado.push(`<p>${linea}</p>`);
             }
         }
 
-        return resultado.join('<br/>');
+        return resultado.join('');
     }
+
 
     //efecto para iniciar la Pag desd la parte SUPERIOR
     useEffect(() => {
@@ -123,8 +120,17 @@ function DetalleProp() {
                                             {propiedad.direccion}
                                         </p>
                                     </div>
-                                    {/* btn-video */}
-                                    <div className='cont-btnVideo-E-icono'>
+                                </div>
+                            </div>
+
+                            {/* carrusel y formulario */}
+                            <div className='cont-imgs-info'>
+
+                                {/* carrusel */}
+                                <div className='cont-imagenes'>
+                                    {/* botones multimedia */}
+                                    <div className='cont-multimedia'>
+                                        {/* btn-video */}
                                         <button
                                             onClick={() => contexto.handleIsOpen()}
                                             className='btn-video'
@@ -133,12 +139,6 @@ function DetalleProp() {
                                             Ver video
                                         </button>
                                     </div>
-                                </div>
-                            </div>
-
-                            {/* carrusel y formulario */}
-                            <div className='cont-imgs-info'>
-                                <div className='cont-imagenes'>
                                     {
                                         propiedad?.imagenes
                                             ?
@@ -147,12 +147,12 @@ function DetalleProp() {
                                             <p>No img</p>
                                     }
                                 </div>
-                                
+
                                 <div className='cont-form-contacto'>
                                     <FormularioContacto
-                                            tituloPublicacion={propiedad.tituloPublicacion}
-                                            codigoReferencia={propiedad.codigoReferencia}
-                                        />
+                                        tituloPublicacion={propiedad.tituloPublicacion}
+                                        codigoReferencia={propiedad.codigoReferencia}
+                                    />
                                 </div>
                             </div>
 
