@@ -7,12 +7,9 @@ import HomeIcon from '@mui/icons-material/Home';
 import TagIcon from '@mui/icons-material/Tag';
 import HotelIcon from '@mui/icons-material/Hotel';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import IconoSup from '../../Images/Iconos/IconoSup';
-import './styles.css'
 import MeGusta from '../BotonMeGusta';
-
-
+import './styles.css'
 
 function Card({ id, direccionF, cantCocheras, operacion, imagenes, tituloPublicacion, ambientes, dormitorios, supTotal, supCubierta, supDescubierta, unidadMedida, tipo }) {
 

@@ -23,8 +23,12 @@ footer ul {
     display: flex;
     width: 100%;
 }
+.a-logo{
+    padding: 10px;
+}
 .logo-footbar {
-    height: 15rem;
+    height: 13rem;
+    border-radius: 10px;
 }
 footer ul li {
     display: inline-block;
