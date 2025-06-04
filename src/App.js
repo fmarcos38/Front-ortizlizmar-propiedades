@@ -25,7 +25,7 @@ function App() {
           <Navbar />
         </header>
 
-        <main style={{ width: '100%' }}>          
+        <main className='cont-main'>          
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path='/ventas' element={<PropsVenta />} />
@@ -40,7 +40,7 @@ function App() {
             <Route path='*' element={<Home />} />
           </Routes>
           {/* btn whatsapp */}
-          <WhatsAppButton />
+          {/* <WhatsAppButton /> */}
         </main>
 
         <footer>
